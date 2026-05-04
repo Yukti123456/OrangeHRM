@@ -1,0 +1,32 @@
+*** Variables ***
+${BASE_URL}                 https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${DASHBOARD_URL}            https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+${BROWSER}                  chrome
+${IMPLICIT_WAIT}            10s
+${EXPLICIT_WAIT}            15s
+${SHORT_WAIT}               3s
+${PAGE_LOAD_TIMEOUT}        30s
+${SCREENSHOT_DIR}           ${CURDIR}/screenshots
+
+# --- Valid Credentials ---
+${VALID_USERNAME}           Admin
+${VALID_PASSWORD}           admin123
+
+# --- Locators ---
+${USERNAME_FIELD}           xpath=//input[@name='username']
+${PASSWORD_FIELD}           xpath=//input[@name='password']
+${LOGIN_BUTTON}             xpath=//button[@type='submit']
+${ERROR_MESSAGE}            xpath=//div[contains(@class,'oxd-alert-content')]//p
+${ERROR_ALERT}              xpath=//div[contains(@class,'oxd-alert')]
+${USERNAME_REQUIRED}        xpath=(//span[contains(@class,'oxd-input-field-error-message')])[1]
+${PASSWORD_REQUIRED}        xpath=(//span[contains(@class,'oxd-input-field-error-message')])[2]
+${DASHBOARD_HEADER}         xpath=//h6[contains(@class,'oxd-topbar-header-breadcrumb')]
+${FORGOT_PASSWORD_LINK}     xpath=//p[contains(@class,'orangehrm-login-forgot')]
+${RESET_PASSWORD_HEADER}    xpath=//h6[contains(text(),'Reset Password')]
+${RESET_USERNAME_FIELD}     xpath=//input[@name='username']
+${RESET_SUBMIT_BUTTON}      xpath=//button[@type='submit']
+${RESET_SUCCESS_MSG}        xpath=//p[contains(@class,'orangehrm-forgot-password-title')]
+${USER_DROPDOWN}            xpath=//li[contains(@class,'oxd-userdropdown')]
+${LOGOUT_OPTION}            xpath=//a[normalize-space()='Logout']
+${COMPANY_LOGO}             xpath=//div[contains(@class,'orangehrm-login-logo')]
+${PAGE_LOADER}              xpath=//div[contains(@class,'oxd-loading-spinner')]
